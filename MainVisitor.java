@@ -46,17 +46,17 @@ public interface MainVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitStmts(MainParser.StmtsContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link MainParser#assign}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitAssign(MainParser.AssignContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link MainParser#stmt}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitStmt(MainParser.StmtContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link MainParser#assign}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAssign(MainParser.AssignContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link MainParser#allexpr}.
 	 * @param ctx the parse tree

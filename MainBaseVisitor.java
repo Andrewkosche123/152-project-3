@@ -58,14 +58,14 @@ public class MainBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements M
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAssign(MainParser.AssignContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStmt(MainParser.StmtContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStmt(MainParser.StmtContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAssign(MainParser.AssignContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *

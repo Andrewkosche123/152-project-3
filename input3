@@ -1,7 +1,6 @@
 {
     int y; bool y; float o; int c;
     for( c = 0; c <= 23; c++){
-        int c;
         c= 10;
         while (true){
            break;

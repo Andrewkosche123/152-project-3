@@ -6,7 +6,8 @@ decls :  | decls decl;
 decl : type ID SEMI;
 type : INT | FLOAT | BOOL;
 stmts : | stmts stmt;
-stmt :  IF OB allexpr CB stmt | IF OB allexpr CB stmt ELSE stmt | WHILE OB allexpr CB stmt | DO stmt WHILE OB allexpr CB SEMI | FOR OB assign allexpr SEMI incdecexpr CB stmt | BREAK SEMI | block |assign ;
+stmt :  IF OB allexpr CB stmt | IF OB allexpr CB stmt ELSE stmt | WHILE OB allexpr CB stmt | DO stmt WHILE OB allexpr CB SEMI | FOR OB assign allexpr SEMI incdecexpr CB stmt | BREAK SEMI | block
+| assign ;
 assign : ID EQUAL allexpr SEMI;
 allexpr : allexpr OR andexpr | andexpr;
 andexpr : andexpr AND equal | equal;
@@ -20,8 +21,6 @@ factor :  OB allexpr CB | incdecexpr | ID | NUM | REAL | TRUE | FALSE;
 INT : 'int';
 FLOAT : 'float';
 BOOL : 'bool';
-
-ID : ([a-z] | [A-Z])+;
 IF : 'if';
 WHILE : 'while';
 ELSE : 'else';
@@ -50,3 +49,4 @@ CB : ')';
 WS : [ \t\r\n]+ -> skip;
 OFB : '{';
 CFB : '}';
+ID : ([a-zA-Z])+;

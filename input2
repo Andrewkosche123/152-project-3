@@ -1,0 +1,12 @@
+{
+bool l; float r; int o;
+    if(r==34.5654 || (l == true && o == 4)) {
+        do {
+            if (l){
+                l = false;
+            } else {
+                l = true;
+            }
+        } while (1<= r);
+    }
+}
