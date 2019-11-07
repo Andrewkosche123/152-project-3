@@ -1,0 +1,4 @@
+{
+int r; int dd; int a; int d;
+while( dd <= r ) dd = 2*dd;
+}
