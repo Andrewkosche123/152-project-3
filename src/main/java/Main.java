@@ -14,7 +14,7 @@ public class Main {
             mp.addParseListener(new MainBaseListener());
             mp.program();
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
     }
 }
