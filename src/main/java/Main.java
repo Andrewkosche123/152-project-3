@@ -4,10 +4,17 @@ import org.antlr.v4.runtime.BufferedTokenStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.ListTokenSource;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         try {
-            MainLexer mll = new MainLexer(CharStreams.fromFileName("input"));
+            String path = "";
+            Scanner in = new Scanner(System.in);
+            System.out.println("Please enter a path to a test file: ");
+            path = in.nextLine();
+
+            MainLexer mll = new MainLexer(CharStreams.fromFileName(path));
             ListTokenSource ltsl = new ListTokenSource(mll.getAllTokens());
             BufferedTokenStream btsl = new BufferedTokenStream(ltsl);
             MainParser mp = new MainParser(btsl);
