@@ -14,7 +14,6 @@ public class MyVisitor<T> extends MainBaseVisitor<T>{
             return res;
         }
 
-
     @Override public T visitBlock(MainParser.BlockContext ctx) {
         System.out.println("ENTER BLOCK");
         T res = visitChildren(ctx);
@@ -72,6 +71,91 @@ public class MyVisitor<T> extends MainBaseVisitor<T>{
 
         return res;
     }
+
+    @Override public T visitStmts(MainParser.StmtsContext ctx) {
+        System.out.println("ENTER STMTS");
+        T res = visitChildren(ctx);
+        int size = 0;
+
+        if (ctx.children != null) {
+            size = ctx.children.size();
+            System.out.println("EXIT STMTS");
+            System.out.println("  HAD " + size + " CHILDREN");
+        }
+
+        return res;
+    }
+
+    @Override public T visitStmt(MainParser.StmtContext ctx) {
+        System.out.println("ENTER STMT");
+        T res = visitChildren(ctx);
+        int size = 0;
+
+        if (ctx.children != null) {
+            size = ctx.children.size();
+            System.out.println("EXIT STMT");
+            System.out.println("  HAD " + size + " CHILDREN");
+        }
+
+        return res;
+    }
+
+    @Override public T visitAssign(MainParser.AssignContext ctx) {
+        System.out.println("ENTER ASSIGN");
+        T res = visitChildren(ctx);
+        int size = 0;
+
+        if (ctx.children != null) {
+            size = ctx.children.size();
+            System.out.println("EXIT ASSIGN");
+            System.out.println("  HAD " + size + " CHILDREN");
+        }
+
+        return res;
+    }
+
+    @Override public T visitAllexpr(MainParser.AllexprContext ctx) {
+        System.out.println("ENTER ALLEXPR");
+        T res = visitChildren(ctx);
+        int size = 0;
+
+        if (ctx.children != null) {
+            size = ctx.children.size();
+            System.out.println("EXIT ALLEXPR");
+            System.out.println("  HAD " + size + " CHILDREN");
+        }
+
+        return res;
+    }
+
+    @Override public T visitAndexpr(MainParser.AndexprContext ctx) {
+                System.out.println("ENTER ANDEXPR");
+        T res = visitChildren(ctx);
+        int size = 0;
+
+        if (ctx.children != null) {
+            size = ctx.children.size();
+            System.out.println("EXIT ANDEXPR");
+            System.out.println("  HAD " + size + " CHILDREN");
+        }
+
+        return res;
+    }
+
+    @Override public T visitEqual(MainParser.EqualContext ctx) {
+                System.out.println("ENTER EQUAL");
+        T res = visitChildren(ctx);
+        int size = 0;
+
+        if (ctx.children != null) {
+            size = ctx.children.size();
+            System.out.println("EXIT EQUAL");
+            System.out.println("  HAD " + size + " CHILDREN");
+        }
+
+        return res;
+    }
+
     @Override public T visitRel(MainParser.RelContext ctx) {
         System.out.println("ENTER REL");
         T res = visitChildren(ctx);
