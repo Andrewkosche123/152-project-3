@@ -20,7 +20,7 @@ public class Main {
             MainParser mp = new MainParser(btsl);
 
             System.out.println("-----===== PARSE USING LISTENER =====-----");
-            mp.addParseListener(new MainBaseListener());
+            mp.addParseListener(new MyListener());
             mp.program();
 
             System.out.println("\n\n\n\n-----===== PARSE USING VISITOR =====-----");
