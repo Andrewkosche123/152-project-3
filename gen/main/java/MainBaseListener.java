@@ -17,101 +17,61 @@ public class MainBaseListener implements MainListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterProgram(MainParser.ProgramContext ctx) {
-		System.out.println("ENTER PROGRAM");
-	}
+	@Override public void enterProgram(MainParser.ProgramContext ctx) {	}
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitProgram(MainParser.ProgramContext ctx) {
-		int size = 0;
-		if (ctx.children != null)
-			size = ctx.children.size();
-		System.out.println("EXIT PROGRAM");
-		System.out.println("  HAD " + size + " CHILDREN");
-	}
+	@Override public void exitProgram(MainParser.ProgramContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBlock(MainParser.BlockContext ctx) {
-		System.out.println("ENTER BLOCK");
-	}
+	@Override public void enterBlock(MainParser.BlockContext ctx) {	}
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBlock(MainParser.BlockContext ctx) {
-		int size = 0;
-		if (ctx.children != null)
-			size = ctx.children.size();
-		System.out.println("EXIT BLOCK");
-		System.out.println("  HAD " + size + " CHILDREN");
-	}
+	@Override public void exitBlock(MainParser.BlockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDecls(MainParser.DeclsContext ctx) {
-		System.out.println("ENTER DECLS");
-	}
+	@Override public void enterDecls(MainParser.DeclsContext ctx) {	}
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDecls(MainParser.DeclsContext ctx) {
-		int size = 0;
-		if (ctx.children != null)
-			size = ctx.children.size();
-		System.out.println("EXIT DECLS");
-		System.out.println("  HAD " + size + " CHILDREN");
-	}
+	@Override public void exitDecls(MainParser.DeclsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDecl(MainParser.DeclContext ctx) {
-		System.out.println("ENTER DECL");
-	}
+	@Override public void enterDecl(MainParser.DeclContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDecl(MainParser.DeclContext ctx) {
-		int size = 0;
-		if (ctx.children != null)
-			size = ctx.children.size();
-		System.out.println("EXIT DECL");
-		System.out.println("  HAD " + size + " CHILDREN");
-	}
+	@Override public void exitDecl(MainParser.DeclContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterType(MainParser.TypeContext ctx) {
-		System.out.println("ENTER TYPE");
-	}
+	@Override public void enterType(MainParser.TypeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitType(MainParser.TypeContext ctx) {
-		int size = 0;
-		if (ctx.children != null)
-			size = ctx.children.size();
-		System.out.println("EXIT TYPE");
-		System.out.println("  HAD " + size + " CHILDREN");
-	}
+	@Override public void exitType(MainParser.TypeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
