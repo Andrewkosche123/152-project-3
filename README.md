@@ -17,7 +17,14 @@ grun Main program -gui input2
 grun Main program -gui input3
 each will create their own parse three
 
+### Notes on hierachey
+* `gen` directory contains all of the ANTLR generated files. These are left as is and without modification.
+* `src` directory contains all of the code written by us including the driver and the custom Listeners and Visitors
+  * These custom listeners and visitors extend the generated 
+* `RailRoad` directory contains an HTML file along with stylesheet for all of the RailRoad diagrams.
 
+
+### Sample outputs
 Sample output from file `input`
 ```
 /home/ali/apps/idea/jbr/bin/java -javaagent:/home/ali/apps/idea/lib/idea_rt.jar=41601:/home/ali/apps/idea/bin -Dfile.encoding=UTF-8 -classpath /home/ali/Documents/152-project-3/out/production/projext3:/home/ali/Documents/152-project-3/antlr-4.7.1-complete.jar main.java.Main
